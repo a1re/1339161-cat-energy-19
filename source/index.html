@@ -3,15 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
         <picture class="page-header__logo-image">
           <img
-            src="https://via.placeholder.com/128x24"
-            width="128"
-            height="24"
+            src="img/logo-mobile.svg"
+            width="191"
+            height="38"
             alt="Cat Energy">
         </picture>
       </a>
@@ -32,11 +33,12 @@
     </header>
     <main class="page-content">
       <section class="promo">
+        <div class="promo__portrait"></div>
         <h1 class="promo__title">Функциональное питание для котов</h1>
         <p class="promo__lead">Занялся собой? Займись котом!</p>
         <picture class="promo__product">
           <img
-            src="https://via.placeholder.com/280x270"
+            src="img/index-can-mobile@1x.png"
             width="280"
             height="270"
             alt="Cat Energy Pro (курица)">
@@ -52,7 +54,7 @@
               по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу
               сбросить лишний вес.
             </p>
-            <a class="goal__btn">Каталог Slim</a>
+            <a href="catalog.html" class="goal__btn">Каталог Slim</a>
           </li>
           <li class="goals__list-item goal">
             <h2 class="goal__title goal__title--pro">Набор массы</h2>
@@ -60,7 +62,7 @@
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat
               Energy Pro поможет вашему коту нарастить необходимые мышцы!
             </p>
-            <a class="goal__btn">Каталог Pro</a>
+            <a href="catalog.html" class="goal__btn">Каталог Pro</a>
           </li>
         </ul>
       </section>
@@ -108,7 +110,7 @@
           <div class="before-after__image">
             <picture class="before-after__before-image">
               <img
-                src="https://via.placeholder.com/311x232"
+                src="img/before-mobile@1x.png"
                 width="311"
                 height="232"
                 alt="Кот (было)">
@@ -128,52 +130,62 @@
     </main>
     <footer class="page-footer">
       <section class="page-footer__contacts contacts">
-        <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
-        <p class="contacts__address">
-          ул. Большая Конюшенная, д. 19/8<br> Санкт-Петербург
-        </p>
-        <div class="contacts__map"></div>
-      </section>
-      <a class="page-footer__logo" href="index.html">
-        <picture class="page-footer__logo-image">
+        <div class="contacts__invitation-wrapper">
+          <h2 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
+          <address class="contacts__address">
+            ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8 Санкт-Петербург
+          </address>
+        </div>
+        <picture class="contacts__map">
           <img
-            src="https://via.placeholder.com/128x24"
-            width="128"
-            height="24"
-            alt="Cat Energy">
+            src="img/bg-map-mobile@1x.png"
+            width="320"
+            height="400"
+            alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
         </picture>
-      </a>
-      <ul class="page-footer__social social">
-        <li class="social__item">
-          <a class="social__link social__link--vkontakte" href="https://vk.com">
-            Мы во Вконтакте
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://vk.com">
-            Мы в Фейсбуке
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--instagram" href="https://vk.com">
-            Мы в Инстаграме
-          </a>
-        </li>
-      </ul>
-      <div class="page-footer__credits credits">
-        <a class="credits__text" href="https://htmlacademy.ru/intensive/adaptive">
-          HTML Academy
-        </a>
-        <a class="credits__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <picture class="credits__logo-image">
+      </section>
+      <section class="page-footer__footer">
+        <a class="page-footer__logo" href="index.html">
+          <picture class="page-footer__logo-image">
             <img
-              src="https://via.placeholder.com/27x34"
-              width="27"
-              height="34"
-              alt="HTML Academy">
+              src="img/logo-footer.svg"
+              width="128"
+              height="24"
+              alt="Cat Energy">
           </picture>
         </a>
-      </div>
+        <ul class="page-footer__social social">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="https://vk.com">
+              Мы во Вконтакте
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://vk.com">
+              Мы в Фейсбуке
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="https://vk.com">
+              Мы в Инстаграме
+            </a>
+          </li>
+        </ul>
+        <div class="page-footer__credits credits">
+          <a class="credits__text" href="https://htmlacademy.ru/intensive/adaptive">
+            HTML Academy
+          </a>
+          <a class="credits__logo" href="https://htmlacademy.ru/intensive/adaptive">
+            <picture class="credits__logo-image">
+              <img
+                src="img/htmlacademy.svg"
+                width="27"
+                height="34"
+                alt="HTML Academy">
+            </picture>
+          </a>
+        </div>
+      </section>
     </footer>
   </body>
 </html>

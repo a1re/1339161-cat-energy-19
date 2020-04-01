@@ -1,0 +1,73 @@
+.promo {
+  position: relative;
+
+  padding-top: 29px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  color: @white;
+}
+
+.promo__portrait {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+  height: 305px;
+
+  background: @leaf url("../img/index-background-mobile@1x.jpg") no-repeat center center;
+}
+
+.promo__title {
+  margin: 0 auto;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 36px;
+  text-align: center;
+  line-height: 36px;
+}
+
+.promo__lead {
+  margin: 19px auto 0 auto;
+
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.promo__product {
+  display: block;
+  margin: 29px auto 0 auto;
+
+  text-align: center;
+}
+
+.promo__btn-select {
+  display: block;
+  height: 40px;
+  margin-top: 5px;
+
+  text-align:center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  line-height: 40px;
+
+  background-color: @leaf;
+  color: @white;
+
+  &:hover {
+    background-color: @leaf-hover;
+  }
+
+  &:active {
+    background-color: @leaf-active;
+    color: @white-30;
+  }
+
+}

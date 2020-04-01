@@ -1,0 +1,66 @@
+.goal {
+  background: @light-gray;
+}
+
+.goal__title {
+  .before-icon(@icon) {
+    height: 50px;
+    width: 50px;
+    display: block;
+    margin-right: 20px;
+
+    background:
+      url(@icon) no-repeat center center,
+      radial-gradient(circle, @leaf, @leaf 66%, transparent 66%);
+    content: "";
+  }
+
+  display: flex;
+  margin: 0 0 20px 0;
+  padding: 0;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 50px;
+  text-transform: uppercase;
+  vertical-align: middle;
+
+  &--slim::before {
+    .before-icon("../img/icon-cat-slim.svg");
+/*    content: url("../img/icon-cat-slim.svg");*/
+  }
+
+  &--pro::before {
+    .before-icon("../img/icon-cat-pro.svg");
+/*    content: url("../img/icon-cat-pro.svg"); */
+  }
+}
+
+.goal__description {
+  padding: 0 0 20px 0;
+  margin: 0 0 20px 0;
+
+  font-size: 14px;
+  line-height: 18px;
+  color: @dark-gray;
+
+  border-bottom: @gray 1px solid;
+}
+
+.goal__btn {
+  display: flex;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: @dark-gray;
+
+  &::after {
+    width: 25px;
+    height: 12px;
+    margin-left: 15px;
+
+    content: url("../img/icon-right-arrow-long.svg");
+  }
+}
