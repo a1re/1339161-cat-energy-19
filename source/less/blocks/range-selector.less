@@ -40,9 +40,9 @@
 
   width: 85px;
   background-color: transparent;
-  -webkit-appearance: none;
+  appearance: none;
 
-/* На будущее, когда буду заниматься доступностью и управлением с клавиатуры
+  /* На будущее, когда буду заниматься доступностью и управлением с клавиатуры
   &:focus {
     outline: none;
   }
@@ -50,7 +50,7 @@
   &:focus::-webkit-slider-runnable-track {
     border-color: @leaf;
   }
-*/
+  */
 
   &::-webkit-slider-runnable-track {
     .track();
@@ -58,7 +58,7 @@
 
   &::-webkit-slider-thumb {
     .thumb();
-    -webkit-appearance: none;
+    appearance: none;
     margin-top: 3px;
   }
 
@@ -69,6 +69,7 @@
   &::-moz-range-track {
     .track();
   }
+
   &::-moz-range-thumb {
     .thumb();
   }
@@ -86,17 +87,21 @@
     border: @gray 1px solid;
     border-radius: 12px;
   }
+
   &::-ms-fill-upper {
     background: @white;
     border: @gray 1px solid;
     border-radius: 12px;
   }
+
   &::-ms-thumb {
     .thumb();
   }
+
   &:focus::-ms-fill-lower {
     background: @white;
   }
+
   &:focus::-ms-fill-upper {
     background: @white;
   }
