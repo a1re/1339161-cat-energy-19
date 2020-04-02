@@ -1,0 +1,28 @@
+.default-button() {
+  display: block;
+  height: 40px;
+  margin-top: 5px;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-align:center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  line-height: 40px;
+
+  background-color: @leaf;
+  color: @white;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: @leaf-hover;
+  }
+
+  &:active {
+    background-color: @leaf-active;
+    color: @white-30;
+  }
+}
