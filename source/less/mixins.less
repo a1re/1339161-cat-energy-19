@@ -1,19 +1,24 @@
+.font-oswald (@font-size; @line-height; @color; @text-transform: none; @weight: 400) {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: @weight;
+  line-height: @line-height;
+  font-size: @font-size;
+  color: @color;
+  text-transform: @text-transform;
+}
+
 .default-button() {
   display: block;
   height: 40px;
   margin-top: 5px;
 
-  font-family: "Oswald", "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  text-align:center;
+  .font-oswald(16px; 40px; @white; uppercase);
+  text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
   vertical-align: middle;
-  line-height: 40px;
 
   background-color: @leaf;
-  color: @white;
+  border: none;
 
   cursor: pointer;
 
@@ -25,4 +30,12 @@
     background-color: @leaf-active;
     color: @white-30;
   }
+}
+
+.visually-hidden() {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
