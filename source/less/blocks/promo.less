@@ -1,12 +1,14 @@
 .promo {
+  .margin-padding-0();
+
   position: relative;
 
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 30px 20px 0 20px;
 }
 
 .promo__portrait {
+  .margin-padding-0();
+
   position: absolute;
   top: 0;
   left: 0;
@@ -19,21 +21,26 @@
 }
 
 .promo__title {
-  margin: 0 auto;
-  padding: 0;
-
+  .margin-padding-0();
   .font-oswald (36px; 36px; @white);
+
+  margin: 0 auto;
+
   text-align: center;
 }
 
 .promo__lead {
+  .margin-padding-0();
+  .font-oswald (14px; 14px; @white; uppercase);
+
   margin: 20px auto 0 auto;
 
-  .font-oswald (14px; 14px; @white; uppercase);
   text-align: center;
 }
 
 .promo__product {
+  .margin-padding-0();
+
   display: block;
   margin: 30px auto 0 auto;
 

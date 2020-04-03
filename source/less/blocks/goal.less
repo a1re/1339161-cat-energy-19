@@ -3,37 +3,41 @@
 }
 
 .goal__title {
-  .before-icon(@icon) {
+  .margin-padding-0();
+  .font-oswald (24px; 50px; @black; uppercase);
+
+  display: flex;
+  margin-bottom: 20px;
+
+  vertical-align: middle;
+
+  &::before {
+    display: block;
     height: 50px;
     width: 50px;
-    display: block;
     margin-right: 20px;
 
-    background:
-      url(@icon) no-repeat center center,
-      radial-gradient(circle, @leaf, @leaf 66%, transparent 66%);
     content: "";
   }
 
-  display: flex;
-  margin: 0 0 20px 0;
-  padding: 0;
-
-  .font-oswald (24px; 50px; @black; uppercase);
-  vertical-align: middle;
-
   &--slim::before {
-    .before-icon("../img/icon-cat-slim.svg");
+    background:
+      url("../img/icon-cat-slim.svg") no-repeat center center,
+      radial-gradient(circle, @leaf, @leaf 66%, transparent 66%);
   }
 
   &--pro::before {
-    .before-icon("../img/icon-cat-pro.svg");
+    background:
+      url("../img/icon-cat-pro.svg") no-repeat center center,
+      radial-gradient(circle, @leaf, @leaf 66%, transparent 66%);
   }
 }
 
 .goal__description {
-  padding: 0 0 20px 0;
-  margin: 0 0 20px 0;
+  .margin-padding-0();
+
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 
   font-size: 14px;
   line-height: 18px;
@@ -43,9 +47,10 @@
 }
 
 .goal__btn {
+  .font-oswald (16px; 16px; @black; uppercase);
+
   display: flex;
 
-  .font-oswald (16px; 16px; @black; uppercase);
   text-decoration: none;
 
   &::after {

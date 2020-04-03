@@ -1,13 +1,14 @@
 .range-selector {
+  .margin-padding-0();
+
   margin: 0 auto;
 }
 
 .range-selector__label {
-  margin: 0 20px;
+  .margin-padding-0();
+  .font-oswald (16px; 16px; @black; uppercase);
 
-  font-family: "Oswald", "Arial", sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
+  margin: 0 20px;
 }
 
 /*
@@ -17,6 +18,8 @@
 
 .range-selector__input {
   .track() {
+    .margin-padding-0();
+
     width: 85px;
     height: 14px;
 
@@ -28,6 +31,8 @@
   }
 
   .thumb() {
+    .margin-padding-0();
+
     height: 6px;
     width: 35px;
 
@@ -37,6 +42,8 @@
 
     cursor: pointer;
   }
+
+  .margin-padding-0();
 
   width: 85px;
   background-color: transparent;

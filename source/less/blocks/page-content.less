@@ -3,47 +3,46 @@
 }
 
 .page-content__title {
-  margin: 30px 20px;
-  padding: 0;
+  .margin-padding-0();
+  .font-oswald (36px; 36px; @black; uppercase);
 
-  font-family: "Oswald", "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 36px;
+  margin: 30px 20px;
 }
 
 .page-content__product-list {
+  .margin-padding-0();
+
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
 
   list-style-type: none;
 }
 
 .page-content__product-item {
+  .margin-padding-0();
+
   flex-basis: 320px;
-  margin: 0;
-  padding: 0;
 }
 
 .page-content__subtitle {
+  .margin-padding-0();
+  .font-oswald (24px; 24px; @black);
+
   padding: 0 25px 0 20px;
   margin: 30px 0;
-
-  .font-oswald (24px; 24px; @black);
 
   background: @white;
 }
 
 .page-content__additionals-list {
-  margin: 0;
-  padding: 0;
+  .margin-padding-0();
 
   list-style-type: none;
 }
 
 .page-content__additionals-item {
+  .margin-padding-0();
+
   margin: 0 20px;
   padding: 15px 0;
 
@@ -55,10 +54,14 @@
 }
 
 .page-content__promoion {
+  .margin-padding-0();
+
   margin: 35px 20px;
 }
 
 .page-content__lead {
-  margin: 0 20px 40px 20px;
+  .margin-padding-0();
   .font-oswald (14px; 18px; @black; uppercase);
+
+  margin: 0 20px 40px 20px;
 }

@@ -1,16 +1,20 @@
 .example {
+  .margin-padding-0();
+
   background: @light-gray;
-  padding: 0 20px;
+  padding: 20px;
 }
 
 .example__title {
-  margin: 0 -20px;
-  padding: 30px 20px 15px 20px;
-
+  .margin-padding-0();
   .font-oswald (36px; 36px; @black);
+
+  margin: 10px 0 15px 0;
 }
 
 .example__description {
+  .margin-padding-0();
+
   margin: 15px 15px 25px 0;
 
   color: @dark-gray;
@@ -19,27 +23,31 @@
 }
 
 .example__numbers-list {
+  .margin-padding-0();
+
   display: flex;
   justify-content: space-between;
-  margin: 0;
-  padding: 0;
 
   list-style-type: none;
 }
 
 .example__numbers-item {
+  .margin-padding-0();
+
   min-width: 125px;
-  margin: 0;
-  padding: 0;
 }
 
 .example__expenses {
+  .margin-padding-0();
+  .font-oswald (14px; 14px; @black; uppercase);
+
   margin: 40px 0;
 
-  .font-oswald (14px; 14px; @black; uppercase);
   text-align: center;
 }
 
 .example__compare {
+  .margin-padding-0();
+
   margin: 0 -20px;
 }
