@@ -1,0 +1,49 @@
+.show-more {
+  .margin-padding-0();
+
+  border: @gray 1px solid;
+  padding: 25px 20px;
+
+  text-align: center;
+}
+
+.show-more::before {
+  .margin-padding-0();
+
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 25px auto;
+
+  content: url("../img/icon-plus.svg");
+}
+
+.show-more__title {
+  .margin-padding-0();
+  .font-oswald(16px; 20px; @black; uppercase);
+}
+
+.show-more__description {
+  .margin-padding-0();
+
+  font-size: 12px;
+  line-height: 16px;
+  color: @dark-gray;
+}
+
+.show-more__btn-show {
+  .margin-padding-0();
+  .font-oswald(16px; 40px; @dark-gray; uppercase);
+
+  display: block;
+  height: 40px;
+  margin-top: 5px;
+
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+
+  background-color: @light-gray;
+
+  cursor: pointer;
+}

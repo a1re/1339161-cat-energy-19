@@ -1,0 +1,37 @@
+.product-card {
+  .margin-padding-0();
+
+  position: relative;
+
+  padding: 25px 20px;
+  border-top: @gray 1px solid;
+  border-left: @gray 1px solid;
+  border-right: @gray 1px solid;
+}
+
+.product-card__image {
+  .margin-padding-0();
+
+  position: absolute;
+
+  margin-top: -25px;
+}
+
+.product-card__title {
+  .margin-padding-0();
+
+  margin: 0 0 0 160px;
+  width: 100px;
+
+  .font-oswald (16px; 20px; @black; uppercase);
+}
+
+.product-card__content {
+  .margin-padding-0();
+
+  margin: 20px 0 0 160px;
+}
+
+.product-card__btn-purchase {
+  .default-button();
+}

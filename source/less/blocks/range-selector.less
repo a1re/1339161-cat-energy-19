@@ -1,0 +1,115 @@
+.range-selector {
+  .margin-padding-0();
+
+  margin: 0 auto;
+}
+
+.range-selector__label {
+  .margin-padding-0();
+  .font-oswald (16px; 16px; @black; uppercase);
+
+  margin: 0 20px;
+}
+
+/*
+  Основная часть кода ниже взята отсюда:
+  https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
+*/
+
+.range-selector__input {
+  .track() {
+    .margin-padding-0();
+
+    width: 85px;
+    height: 14px;
+
+    background-color: @white;
+    border: @gray 1px solid;
+    border-radius: 6px;
+
+    cursor: pointer;
+  }
+
+  .thumb() {
+    .margin-padding-0();
+
+    height: 6px;
+    width: 35px;
+
+    border: none;
+    border-radius: 3px;
+    background: @leaf;
+
+    cursor: pointer;
+  }
+
+  .margin-padding-0();
+
+  width: 85px;
+  background-color: transparent;
+  appearance: none;
+
+  /* На будущее, когда буду заниматься доступностью и управлением с клавиатуры
+  &:focus {
+    outline: none;
+  }
+
+  &:focus::-webkit-slider-runnable-track {
+    border-color: @leaf;
+  }
+  */
+
+  &::-webkit-slider-runnable-track {
+    .track();
+  }
+
+  &::-webkit-slider-thumb {
+    .thumb();
+    appearance: none;
+    margin-top: 3px;
+  }
+
+  &:focus::-webkit-slider-runnable-track {
+    background: @white;
+  }
+
+  &::-moz-range-track {
+    .track();
+  }
+
+  &::-moz-range-thumb {
+    .thumb();
+  }
+
+  &::-ms-track {
+    .track();
+    background: transparent;
+    border-color: transparent;
+    border-width: 35px 0;
+    color: transparent;
+  }
+
+  &::-ms-fill-lower {
+    background: @white;
+    border: @gray 1px solid;
+    border-radius: 12px;
+  }
+
+  &::-ms-fill-upper {
+    background: @white;
+    border: @gray 1px solid;
+    border-radius: 12px;
+  }
+
+  &::-ms-thumb {
+    .thumb();
+  }
+
+  &:focus::-ms-fill-lower {
+    background: @white;
+  }
+
+  &:focus::-ms-fill-upper {
+    background: @white;
+  }
+}
