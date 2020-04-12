@@ -1,53 +1,164 @@
 .example {
   .margin-padding-0();
 
-  background: @light-gray;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .example__title {
   .margin-padding-0();
   .font-oswald (36px; 36px; @black);
 
-  margin: 10px 0 15px 0;
+  padding: 30px 20px 15px 20px;
+
+  background: @light-gray;
+}
+
+.example__wrapper {
+  background: @light-gray;
 }
 
 .example__description {
   .margin-padding-0();
+  .font-arial (14px; 18px; @dark-gray);
 
-  margin: 15px 15px 25px 0;
-
-  color: @dark-gray;
-  font-size: 14px;
-  line-height: 18px;
+  margin: 15px 20px 25px 20px;
 }
 
 .example__numbers-list {
   .margin-padding-0();
 
   display: flex;
-  justify-content: space-between;
+  flex-basis: 100%;
+  justify-content: center;
+  margin: 0 5px 40px 4px;
 
   list-style-type: none;
 }
 
 .example__numbers-item {
-  .margin-padding-0();
-
-  min-width: 125px;
+  flex-basis: 125px;
+  margin: 0 15px;
 }
 
 .example__expenses {
-  .margin-padding-0();
   .font-oswald (14px; 14px; @black; uppercase);
-
-  margin: 40px 0;
 
   text-align: center;
 }
 
 .example__compare {
-  .margin-padding-0();
+  background: @light-gray;
+}
 
-  margin: 0 -20px;
+@media (min-width: @tablet-width) {
+  .example__title {
+    padding: 0 30px 60px 30px;
+
+    font-size: 60px;
+    line-height: 60px;
+
+    background: none;
+  }
+
+  .example__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    padding-bottom: 85px;
+
+    background: none;
+  }
+
+  .example__description {
+    flex-basis: 100%;
+    margin: 0 30px 55px 30px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .example__numbers-list {
+    flex-basis: 390px;
+    flex-grow: 1;
+    margin: 0 0 0 10px;
+  }
+
+  .example__numbers-item {
+    flex-basis: 170px;
+    flex-grow: 1;
+    margin: 0 20px;
+  }
+
+  .example__expenses {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    flex-basis: 320px;
+    flex-grow: 1;
+    margin: 0 30px 0 0;
+
+    font-size: 20px;
+    line-height: 30px;
+    text-align: right;
+  }
+
+  .example__expenses br {
+    display: inline;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .example__title {
+    flex-basis: 100%;
+    padding: 0;
+    margin: 0 110px 76px 110px;
+  }
+
+  .example__wrapper {
+    flex-basis: 50%;
+    padding: 70px 180px 75px 110px;
+
+    background: @light-gray;
+  }
+
+  .example__description {
+    margin: 0 0 70px 0;
+    padding: 0;
+  }
+
+  .example__numbers-list {
+    margin: 0 20px 60px 0;
+  }
+
+  .example__numbers-item {
+    margin: 0 40px 0 0;
+  }
+
+  .example__compare {
+    flex-basis: 50%;
+    margin: 0 0 0 -75px;
+  }
+
+  .example__expenses {
+    flex-direction: row;
+  }
+
+  .example__expenses-name {
+    flex-basis: 200px;
+
+    text-align: left;
+  }
+
+  .example__expenses-value {
+    flex-basis: 160px;
+
+    text-align: center;
+  }
 }

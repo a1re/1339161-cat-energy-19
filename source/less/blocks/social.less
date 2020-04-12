@@ -1,6 +1,7 @@
 .social {
   display: flex;
   justify-content: center;
+  align-items: center;
 
   list-style-type: none;
 }
@@ -8,7 +9,7 @@
 .social__item {
   .margin-padding-0();
 
-  margin: 25px 20px;
+  margin: 20px 18px;
 
   font-size: 0;
 }
@@ -16,19 +17,55 @@
 .social__link {
   .margin-padding-0();
 
-  display: block;
-  width: 20px;
-  height: 20px;
-
-  &--vkontakte {
-    background: url("../img/icon-vk.svg") no-repeat center center;
+  & svg path,
+  & svg circle {
+    fill: @dark-gray2;
   }
 
-  &--facebook {
-    background: url("../img/icon-fb.svg") no-repeat center center;
+  &:hover svg path,
+  &:hover svg circle {
+    fill: @leaf;
   }
 
-  &--instagram {
-    background: url("../img/icon-insta.svg") no-repeat center center;
+  &:active svg path,
+  &:active svg circle {
+    fill: rgba(@leaf, 0.3);
+  }
+
+  &--vkontakte svg {
+    width: 22px;
+    height: 12px;
+  }
+
+  &--instagram svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  &--facebook svg {
+    width: 10px;
+    height: 19px;
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .social__link {
+    .margin-padding-0();
+
+    &--vkontakte svg {
+      width: 30px;
+      height: 16px;
+    }
+
+    &--instagram svg {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--facebook svg {
+      width: 14px;
+      height: 28px;
+    }
   }
 }

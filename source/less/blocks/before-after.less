@@ -1,16 +1,137 @@
 .before-after {
+  display: flex;
+}
+
+.before-after__wrapper {
+  .margin-padding-0();
+
+  flex-grow: 1;
+
   text-align: center;
 }
 
-.before-after__image {
-  .margin-padding-0();
+.before-after__image-stack {
+  position: relative;
 
-  margin-bottom: 35px;
+  width: 311px;
+  height: 232px;
+  margin: 0 auto 35px auto;
+}
+
+.before-after__image {
+  position: absolute;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-repeat: no-repeat;
+  background-size: 311px 232px;
+
+  &--before {
+    left: 0;
+    width: 50%;
+    background-image: url("../img/before-mobile@1x.png");
+    background-position: left bottom;
+  }
+
+  &--after {
+    right: 0;
+    width: 50%;
+    background-image: url("../img/after-mobile@1x.png");
+    background-position: right bottom;
+  }
 }
 
 .before-after__selector {
-  .margin-padding-0();
+  width: 200px;
+  margin: 0 auto 40px auto;
+}
 
-  display: inline-block;
-  padding: 35px 0;
+@media (min-width: @tablet-width) {
+  .before-after {
+    margin-top: 170px;
+    justify-content: center;
+    align-items: stretch;
+
+    &::before {
+      display: block;
+      flex-basis: 86px;
+      flex-grow: 1;
+
+      content: " ";
+    }
+
+    &::after {
+      display: block;
+      flex-basis: 86px;
+      flex-grow: 1;
+
+      background-color: @light-gray2;
+
+      content: " ";
+    }
+  }
+
+  .before-after__wrapper {
+    position: relative;
+
+    flex-basis: 676px;
+    flex-grow: 0;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 0;
+
+      display: block;
+      width: 50%;
+      height: 100%;
+
+      background-color: @light-gray2;
+
+      content: " ";
+    }
+  }
+
+  .before-after__image-stack {
+    width: 676px;
+    height: 347px;
+    margin-bottom: 15px;
+  }
+
+  .before-after__image {
+    z-index: 1;
+
+    height: 517px;
+    margin-top: -170px;
+
+    &--before {
+      background-image: url("../img/before-tablet@1x.png");
+      background-size: 676px 499px;
+      background-position: left 5px bottom;
+    }
+
+    &--after {
+      background-image: url("../img/after-tablet@1x.png");
+      background-size: 596px 517px;
+      background-position: right 35px bottom;
+    }
+  }
+
+  .before-after__selector {
+    position: relative;
+    z-index: 1;
+
+    width: 570px;
+    margin: 0 auto 65px auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .before-after {
+    margin-top: 0;
+    flex-grow: 1;
+  }
 }

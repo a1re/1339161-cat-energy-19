@@ -5,7 +5,6 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding: 0 20px;
   margin: 0 0 15px 0;
 }
 
@@ -58,7 +57,16 @@
   .margin-padding-0();
 
   border: @light-gray 1px solid;
-  padding: 20px 0 5px 0;
+  padding: 20px 0 5px 20px;
+  margin: 0 -20px;
+}
+
+.request-form__wrapper {
+  margin: 30px 20px;
+
+  &--contacts {
+    margin-top: 65px;
+  }
 }
 
 .request-form__radio {
@@ -79,7 +87,7 @@
     display: block;
     width: 12px;
     height: 12px;
-    margin: 9px;
+    margin: 8px;
 
     visibility: hidden;
     background-color: @leaf;
@@ -166,29 +174,167 @@
   }
 }
 
-.request-form__submit-wrapper {
-  .margin-padding-0();
-
-  display: block;
-  padding: 15px 20px;
-}
-
 .request-form__btn-submit {
   .margin-padding-0();
-
   .default-button();
 
   width: 100%;
-  padding: 0;
-  margin: 0;
 }
 
 .request-form__notice {
   .margin-padding-0();
+  .font-arial(14px; 14px; @dark-gray);
 
-  margin: 0 0 35px 0;
-
-  font-size: 14px;
-  color: @dark-gray;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .request-form__field {
+    .margin-padding-0();
+
+    margin-bottom: 20px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .request-form__input {
+    height: 50px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .request-form__fieldset {
+    margin: 50px 0 0 0;
+    padding: 25px 30px 5px 30px;
+  }
+
+  .request-form__fieldset .request-form__field {
+    margin-bottom: 15px;
+  }
+
+  .request-form__radio-checkmark {
+    .margin-padding-0();
+
+    height: 40px;
+    width: 40px;
+    margin-right: 20px;
+
+    &::after {
+      width: 18px;
+      height: 18px;
+      margin: 10px;
+    }
+  }
+
+  .request-form__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 70px 50px 70px;
+
+    &--main {
+      margin-bottom: 75px;
+    }
+
+    &--additionals {
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: -20px;
+      margin-right: 10px;
+    }
+
+    &--submit {
+      flex-direction: row;
+      align-items: center;
+      margin-top: -30px;
+      margin-bottom: 70px;
+    }
+  }
+
+  .request-form__wrapper--additionals .request-form__field {
+    width: 280px;
+    margin: 0 60px 30px 0;
+  }
+
+  .request-form__textarea {
+    height: 175px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .request-form__checkbox-checkmark {
+    .margin-padding-0();
+
+    height: 40px;
+    width: 40px;
+    margin-right: 20px;
+
+    &::after {
+      width: 20px;
+      height: 10px;
+      margin: 9px 0 0 9px;
+    }
+  }
+
+  .request-form__btn-submit {
+    width: 280px;
+    height: 50px;
+    flex-grow: 0;
+  }
+
+  .request-form__notice {
+    margin-left: 60px;
+
+    font-size: 16px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .request-form__wrapper {
+    display: flex;
+    margin: 0 110px 50px 110px;
+
+    &--main {
+      flex-wrap: wrap;
+      align-content: space-between;
+      justify-content: space-between;
+      height: 215px;
+    }
+
+    &--contacts {
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &--additionals {
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .request-form__wrapper--main > .request-form__field,
+  .request-form__wrapper--contacts > .request-form__field {
+    width: 570px;
+  }
+
+  .request-form__wrapper--main > .request-form__fieldset {
+    margin-top: 0;
+    width: 50%;
+  }
+
+  .request-form__wrapper--additionals > .request-form__field {
+    margin: 0;
+  }
+
+  .request-form__btn-submit {
+    width: 570px;
+  }
+
+  .request-form__notice {
+    margin-left: 80px;
+  }
 }

@@ -1,9 +1,5 @@
-.contacts__invitation-wrapper {
-  .margin-padding-0();
-
+.contacts {
   display: flex;
-  justify-content: space-between;
-  padding: 20px;
 }
 
 .contacts__title {
@@ -15,16 +11,33 @@
 
 .contacts__address {
   .margin-padding-0();
+  .font-arial (14px; 20px; @dark-gray);
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin-left: 10px;
 
-  color: @dark-gray;
   font-style: normal;
-  font-size: 14px;
-  line-height: 20px;
 }
 
-/* Это временно пока не вставим Гуглокарту */
-.contacts__map img {
-  display: block;
+@media (min-width: @tablet-width) {
+  .contacts__title {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .contacts__address {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .contacts__address {
+    text-align: left;
+    margin-left: 95px;
+  }
 }

@@ -8,7 +8,7 @@
   .margin-padding-0();
   .font-oswald (36px; 36px; @black);
 
-  margin: 0 0 35px 20px;
+  margin: 0 20px 35px 20px;
 }
 
 .how-it-works__list {
@@ -24,7 +24,7 @@
   .margin-padding-0();
 
   display: flex;
-  min-width: 280px;
+  flex-basis: 100%;
   margin: 0 0 20px 20px;
   align-items: center;
 
@@ -56,5 +56,101 @@
 
   &--timing::before {
     background: @leaf url("../img/advantage-clock@1x.png") no-repeat center center;
+  }
+}
+
+@media (max-width: @tablet-width - 1) {
+  .how-it-works__item br {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .how-it-works {
+    padding: 0;
+  }
+
+  .how-it-works__title {
+    margin: 0 30px 45px 30px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .how-it-works__list {
+    margin: 0 -30px 50px -30px;
+    padding: 0 30px;
+    border-bottom: @light-gray 1px solid;
+  }
+
+  .how-it-works__item {
+    position: relative;
+
+    flex-basis: 50%;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 230px;
+    margin: 30px 0 55px 0;
+    padding-left: 30px;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    &::before {
+      min-width: 80px;
+      height: 80px;
+      margin-bottom: 35px;
+    }
+
+    &::after {
+      position: absolute;
+      top: -38px;
+      left: 150px;
+      z-index: -1;
+
+      .font-oswald (281px; 281px; @light-gray);
+    }
+
+    &--content::after {
+      content: "1";
+    }
+
+    &--form::after {
+      content: "2";
+    }
+
+    &--howto::after {
+      content: "3";
+    }
+
+    &--timing::after {
+      content: "4";
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .how-it-works {
+    padding: 0 110px;
+    margin-bottom: 90px;
+  }
+
+  .how-it-works__title {
+    margin: 0 0 70px 0;
+  }
+
+  .how-it-works__list {
+    flex-wrap: nowrap;
+    margin: 0 -45px 0 -40px;
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .how-it-works__item {
+    min-width: 240px;
+    margin: 0 45px 0 40px;
+    padding: 0;
   }
 }

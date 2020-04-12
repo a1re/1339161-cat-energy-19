@@ -18,6 +18,7 @@
   height: 305px;
 
   background: @leaf url("../img/index-background-mobile@1x.jpg") no-repeat center center;
+  background-size: cover;
 }
 
 .promo__title {
@@ -42,11 +43,113 @@
   .margin-padding-0();
 
   display: block;
+  width: 280px;
+  height: 270px;
   margin: 30px auto 0 auto;
 
   text-align: center;
+
+  background: url("../img/index-can-mobile@1x.png") no-repeat left top;
 }
 
 .promo__btn-select {
   .default-button();
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    padding: 0 30px 0 30px;
+  }
+
+  .promo__portrait {
+    display: none;
+  }
+
+  .promo__title {
+    width: 450px;
+    margin: 45px 30px 30px 100px;
+
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    color: @black;
+  }
+
+  .promo__lead {
+    margin: 0 30px 20px 100px;
+    color: @black;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+  }
+
+  .promo__product {
+    .margin-padding-0();
+
+    width: 709px;
+    height: 609px;
+    margin: 0 auto;
+
+    background: url("../img/index-can-tablet@1x.jpg") no-repeat left top;
+  }
+
+  .promo__btn-select {
+    position: absolute;
+    left: 120px;
+    top: 290px;
+
+    display: inline-block;
+    width: 245px;
+    height: 50px;
+
+    font-size: 20px;
+    line-height: 50px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .promo {
+    padding: 110px 0 0 0;
+    margin: 0 0 105px 0;
+    height: 554px;
+  }
+
+  .promo__product {
+    position: absolute;
+    top: 30px;
+    right: 328px;
+
+    width: 552px;
+    height: 499px;
+
+    background: url("../img/index-can-desktop@1x.png") no-repeat left top;
+  }
+
+  .promo__portrait {
+    top: -115px;
+    right: 0;
+    left: auto;
+
+    display: block;
+    width: 50%;
+    height: 696px;
+
+    background: url("../img/index-background-desktop@1x.jpg") no-repeat right top;
+  }
+
+  .promo__title {
+    margin: 0 0 30px 195px;
+  }
+
+  .promo__lead {
+    margin: 0 0 55px 195px;
+  }
+
+  .promo__btn-select {
+    position: static;
+
+    margin: 0 0 0 195px;
+  }
 }

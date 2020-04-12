@@ -1,7 +1,6 @@
 .range-selector {
-  .margin-padding-0();
-
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
 .range-selector__label {
@@ -17,35 +16,10 @@
 */
 
 .range-selector__input {
-  .track() {
-    .margin-padding-0();
-
-    width: 85px;
-    height: 14px;
-
-    background-color: @white;
-    border: @gray 1px solid;
-    border-radius: 6px;
-
-    cursor: pointer;
-  }
-
-  .thumb() {
-    .margin-padding-0();
-
-    height: 6px;
-    width: 35px;
-
-    border: none;
-    border-radius: 3px;
-    background: @leaf;
-
-    cursor: pointer;
-  }
-
   .margin-padding-0();
 
-  width: 85px;
+  flex-grow: 1;
+  min-width: 85px;
   background-color: transparent;
   appearance: none;
 
@@ -60,33 +34,37 @@
   */
 
   &::-webkit-slider-runnable-track {
-    .track();
-  }
-
-  &::-webkit-slider-thumb {
-    .thumb();
-    appearance: none;
-    margin-top: 3px;
-  }
-
-  &:focus::-webkit-slider-runnable-track {
-    background: @white;
+    .small-track();
   }
 
   &::-moz-range-track {
-    .track();
-  }
-
-  &::-moz-range-thumb {
-    .thumb();
+    .small-track();
   }
 
   &::-ms-track {
-    .track();
+    .small-track();
     background: transparent;
     border-color: transparent;
     border-width: 35px 0;
     color: transparent;
+  }
+
+  &::-webkit-slider-thumb {
+    .small-thumb();
+    appearance: none;
+    margin-top: 3px;
+  }
+
+  &::-moz-range-thumb {
+    .small-thumb();
+  }
+
+  &::-ms-thumb {
+    .small-thumb();
+  }
+
+  &:focus::-webkit-slider-runnable-track {
+    background: @white;
   }
 
   &::-ms-fill-lower {
@@ -101,15 +79,55 @@
     border-radius: 12px;
   }
 
-  &::-ms-thumb {
-    .thumb();
-  }
-
   &:focus::-ms-fill-lower {
     background: @white;
   }
 
   &:focus::-ms-fill-upper {
     background: @white;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .range-selector__label {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 5px 0;
+
+    border-bottom: rgba(@black, 0.23) 1px dotted;
+  }
+
+  .range-selector__label:first-of-type {
+    margin: 0 20px 0 0;
+  }
+
+  .range-selector__label:last-of-type {
+    margin: 0 0 0 20px;
+  }
+
+  .range-selector__input {
+    &::-webkit-slider-runnable-track {
+      .big-track();
+    }
+
+    &::-moz-range-track {
+      .big-track();
+    }
+
+    &::-ms-track {
+      .big-track();
+    }
+
+    &::-webkit-slider-thumb {
+      .big-thumb();
+    }
+
+    &::-moz-range-thumb {
+      .big-thumb();
+    }
+
+    &::-ms-thumb {
+      .big-thumb();
+    }
   }
 }

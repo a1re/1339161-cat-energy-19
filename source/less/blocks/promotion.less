@@ -1,21 +1,22 @@
 .promotion {
-  .margin-padding-0();
-
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 
   height: 289px;
   overflow: hidden;
 
   background: @leaf url("../img/gift-photo-mobile@1x.jpg") no-repeat center center;
+  background-size: cover;
 }
 
 .promotion__icon {
   .margin-padding-0();
 
-  display: block;
   width: 56px;
   height: 61px;
-  margin: 65px auto 0 auto;
+  margin-top: 65px;
 }
 
 .promotion__icon path {
@@ -25,11 +26,51 @@
 .promoion__text {
   .margin-padding-0();
 
-  position: absolute;
-  bottom: 40px;
-  left: 60px;
-  right: 60px;
+  margin-bottom: 40px;
+  width: 160px;
 
   text-align: center;
   color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .promotion {
+    flex-direction: row;
+    height: 200px;
+
+    background: @leaf url("../img/gift-photo-tablet@1x.jpg") no-repeat center center;
+    background-size: cover;
+  }
+
+  .promotion__icon {
+    margin: 0 0 0 90px;
+  }
+
+  .promoion__text {
+    margin: 0 125px 0 0;
+
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promotion {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    background: @leaf url("../img/gift-photo-desktop@1x.jpg") no-repeat center center;
+    background-size: cover;
+  }
+
+  .promotion__icon {
+    margin: 65px 0 0 0;
+  }
+
+  .promoion__text {
+    margin: 0 0 45px 0;
+
+    text-align: center;
+  }
 }
