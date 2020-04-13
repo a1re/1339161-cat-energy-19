@@ -1,8 +1,12 @@
 .show-more {
-  .margin-padding-0();
-
-  border: @gray 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   padding: 25px 20px;
+
+  border-top: @light-gray 1px solid;
+  border-left: @light-gray 1px solid;
 
   text-align: center;
 }
@@ -10,10 +14,9 @@
 .show-more::before {
   .margin-padding-0();
 
-  display: block;
   width: 30px;
   height: 30px;
-  margin: 25px auto;
+  margin-bottom: 25px;
 
   content: url("../img/icon-plus.svg");
 }
@@ -21,10 +24,14 @@
 .show-more__title {
   .margin-padding-0();
   .font-oswald(16px; 20px; @black; uppercase);
+
+  margin-bottom: 10px;
 }
 
 .show-more__description {
   .margin-padding-0();
+
+  margin-bottom: 20px;
 
   font-size: 12px;
   line-height: 16px;
@@ -35,9 +42,8 @@
   .margin-padding-0();
   .font-oswald(16px; 40px; @dark-gray; uppercase);
 
-  display: block;
+  width: 100%;
   height: 40px;
-  margin-top: 5px;
 
   text-align: center;
   text-decoration: none;
@@ -46,4 +52,44 @@
   background-color: @light-gray;
 
   cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .show-more {
+    padding: 40px;
+    justify-content: flex-start;
+
+    border-bottom: @light-gray 1px solid;
+    border-right: @light-gray 1px solid;
+
+    text-align: center;
+  }
+
+  .show-more::before {
+    .margin-padding-0();
+
+    width: 60px;
+    height: 60px;
+    margin: 15px 0 55px 0;
+
+    opacity: 0.2;
+    content: url("../img/icon-plus.svg");
+  }
+
+  .show-more__title {
+    width: 150px;
+    margin-bottom: 30px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .show-more__description {
+    width: 170px;
+    margin: 0 -15px;
+    flex-grow: 1;
+
+    font-size: 16px;
+    line-height: 18px;
+  }
 }

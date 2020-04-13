@@ -1,6 +1,4 @@
 .nutritional {
-  .margin-padding-0();
-
   display: flex;
   flex-wrap: wrap;
 }
@@ -20,4 +18,16 @@
   .margin-padding-0();
 
   text-align: right;
+}
+
+@media (min-width: @tablet-width) {
+  .nutritional__name,
+  .nutritional__value {
+    padding: 7px 0;
+
+    font-size: 16px;
+    line-height: 16px;
+
+    border-bottom: @gray 1px solid;
+  }
 }

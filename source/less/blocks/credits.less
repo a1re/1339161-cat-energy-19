@@ -7,8 +7,30 @@
 .credits__text {
   color: @dark-gray;
   text-decoration: none;
+  margin-right: 25px;
 }
 
-.credits__logo-image {
-  filter: grayscale(100%);
+.credits__text:active {
+  color: rgba(@dark-gray2, 0.3);
+}
+
+.credits__logo {
+  display: block;
+}
+
+.credits__logo svg {
+  width: 27px;
+  height: 34px;
+}
+
+.credits__logo svg path {
+  fill: @dark-gray2;
+}
+
+.credits__logo:hover svg path {
+  fill: @leaf;
+}
+
+.credits__logo:active svg path {
+  fill: rgba(@dark-gray2, 0.3);
 }
