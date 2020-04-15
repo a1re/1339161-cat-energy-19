@@ -13,9 +13,9 @@
 .before-after__image-stack {
   position: relative;
 
-  width: 311px;
-  height: 232px;
-  margin: 0 auto 35px auto;
+  width: 320px;
+  height: 240px;
+  margin: 0 auto 40px auto;
 }
 
 .before-after__image {
@@ -96,7 +96,7 @@
   }
 
   .before-after__image-stack {
-    width: 676px;
+    width: 690px;
     height: 347px;
     margin-bottom: 15px;
   }
@@ -109,14 +109,14 @@
 
     &--before {
       background-image: url("../img/before-tablet@1x.png");
-      background-size: 676px 499px;
-      background-position: left 5px bottom;
+      background-size: 690px 517px;
+      background-position: left 7px bottom;
     }
 
     &--after {
       background-image: url("../img/after-tablet@1x.png");
-      background-size: 596px 517px;
-      background-position: right 35px bottom;
+      background-size: 690px 517px;
+      background-position: right -7px bottom;
     }
   }
 
@@ -133,5 +133,19 @@
   .before-after {
     margin-top: 0;
     flex-grow: 1;
+  }
+
+  .before-after__image {
+    margin-top: -190px;
+
+    &--before {
+      background-image: url("../img/before-desktop@1x.png");
+      background-position: left -20px bottom 0;
+    }
+
+    &--after {
+      background-image: url("../img/after-desktop@1x.png");
+      background-position: right 20px bottom 0;
+    }
   }
 }
