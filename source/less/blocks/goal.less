@@ -80,8 +80,10 @@
 
 @media (min-width: @tablet-width) {
   .goal {
+    position: relative;
+
     display: block;
-    padding: 80px 0 60px 55px;
+    padding: 80px 0 70px 55px;
 
     &::before {
       display: block;
@@ -131,18 +133,23 @@
   }
 
   .goal__btn {
+    position: absolute;
+    bottom: 60px;
+
     font-size: 20px;
     line-height: 20px;
 
     &::after {
       height: 20px;
+      margin-left: 25px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .goal {
-    padding: 45px 60px 60px 50px;
+    padding: 45px 50px 60px 50px;
+    min-height: 375px;
 
     &::before {
       display: none;
@@ -186,7 +193,12 @@
     margin-bottom: 30px;
   }
 
-  .goal__btn::after {
-    margin-left: 25px;
+  .goal__btn {
+    position: static;
+
+    &::after {
+      margin-left: 25px;
+    }
   }
+
 }
