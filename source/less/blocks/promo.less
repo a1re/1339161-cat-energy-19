@@ -1,9 +1,8 @@
 .promo {
-  .margin-padding-0();
-
   position: relative;
 
-  padding: 30px 20px 0 20px;
+  padding: 30px 0 0 0;
+  margin-bottom: 20px;
 }
 
 .promo__portrait {
@@ -11,8 +10,8 @@
 
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
+  left: -20px;
+  right: -20px;
   z-index: -1;
 
   height: 305px;
@@ -25,7 +24,7 @@
   .margin-padding-0();
   .font-oswald (36px; 36px; @white);
 
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
 
   text-align: center;
 }
@@ -34,7 +33,7 @@
   .margin-padding-0();
   .font-oswald (14px; 14px; @white; uppercase);
 
-  margin: 20px auto 0 auto;
+  margin: 0 auto 30px auto;
 
   text-align: center;
 }
@@ -45,7 +44,7 @@
   display: block;
   width: 280px;
   height: 270px;
-  margin: 30px auto 0 auto;
+  margin: 0 auto 5px auto;
 
   text-align: center;
 
@@ -54,11 +53,14 @@
 
 .promo__btn-select {
   .default-button();
+
+  font-size: 14px;
 }
 
 @media (min-width: @tablet-width) {
   .promo {
-    padding: 0 30px 0 30px;
+    padding: 60px 30px 0 30px;
+    margin-bottom: 0;
   }
 
   .promo__portrait {
@@ -67,7 +69,7 @@
 
   .promo__title {
     width: 450px;
-    margin: 45px 30px 30px 100px;
+    margin: 0 30px 40px 60px;
 
     font-size: 60px;
     line-height: 60px;
@@ -76,7 +78,7 @@
   }
 
   .promo__lead {
-    margin: 0 30px 20px 100px;
+    margin: 0 30px 20px 60px;
     color: @black;
 
     font-size: 20px;
@@ -84,20 +86,10 @@
     text-align: left;
   }
 
-  .promo__product {
-    .margin-padding-0();
-
-    width: 709px;
-    height: 609px;
-    margin: 0 auto;
-
-    background: url("../img/index-can-tablet@1x.jpg") no-repeat left top;
-  }
-
   .promo__btn-select {
     position: absolute;
-    left: 120px;
-    top: 290px;
+    left: 90px;
+    top: 285px;
 
     display: inline-block;
     width: 245px;
@@ -106,25 +98,37 @@
     font-size: 20px;
     line-height: 50px;
   }
+
+  .promo__product {
+    .margin-padding-0();
+
+    width: auto;
+    height: 609px;
+    margin: 0 -30px;
+
+    background: url("../img/index-can-tablet@1x.jpg") no-repeat left top;
+  }
 }
 
 
 @media (min-width: @desktop-width) {
   .promo {
     padding: 110px 0 0 0;
-    margin: 0 0 105px 0;
-    height: 554px;
+    margin: 0 -110px 80px -110px;
+    min-height: 580px;
   }
 
   .promo__product {
     position: absolute;
     top: 30px;
-    right: 328px;
+    left: 50%;
 
     width: 552px;
     height: 499px;
 
     background: url("../img/index-can-desktop@1x.png") no-repeat left top;
+
+    transform: translateX(-24%);
   }
 
   .promo__portrait {
@@ -136,20 +140,21 @@
     width: 50%;
     height: 696px;
 
-    background: url("../img/index-background-desktop@1x.jpg") no-repeat right top;
+    background: #67a843 url("../img/index-background-desktop@1x.jpg") no-repeat right center;
+    background-size: cover;
   }
 
   .promo__title {
-    margin: 0 0 30px 195px;
+    margin: 0 0 40px 13%;
   }
 
   .promo__lead {
-    margin: 0 0 55px 195px;
+    margin: 0 0 55px 13%;
   }
 
   .promo__btn-select {
     position: static;
 
-    margin: 0 0 0 195px;
+    margin: 0 0 0 13%;
   }
 }

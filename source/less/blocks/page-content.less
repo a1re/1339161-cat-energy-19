@@ -1,5 +1,7 @@
 .page-content {
   min-width: 320px;
+  width: auto;
+  padding: 0 20px;
 }
 
 .page-content__title {
@@ -90,6 +92,12 @@
 }
 
 @media (min-width: @tablet-width) {
+  .page-content {
+    min-width: 320px;
+    width: auto;
+    padding: 0 30px;
+  }
+
   .page-content__title {
     margin: 35px 30px 50px 30px;
 
@@ -162,8 +170,8 @@
 
 @media (min-width: @desktop-width) {
   .page-content {
-    width: @desktop-width;
     margin: 0 auto;
+    padding: 0 110px;
   }
 
   .page-content__title {
