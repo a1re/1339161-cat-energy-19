@@ -16,7 +16,7 @@
 
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -20px 30px -20px;
+  margin: 0 -20px 45px -20px;
   list-style-type: none;
 }
 
@@ -61,19 +61,17 @@
   .margin-padding-0();
   .font-oswald (14px; 18px; @black; uppercase);
 
-  margin: 0 20px 40px 20px;
-  padding-top: 10px;
+  margin: 0 0 35px 0;
 }
 
 .page-content__subtitle-dash {
-  height: 15px;
-  margin: 0 -20px 40px -20px;
+  margin: 15px -20px 30px -20px;
 
-  border-bottom: @leaf 3px solid;
+  border-top: @leaf 3px solid;
 }
 
 .page-content__subtitle-wrapper {
-  margin: 0 30px 0 0;
+  margin: -15px 30px 0 0;
 }
 
 .page-content__subtitle {
@@ -101,16 +99,23 @@
   }
 
   .page-content__title {
-    margin: 0 0 50px 0;
+    margin: 0 0 55px 0;
 
     font-size: 60px;
     line-height: 60px;
   }
 
+  .page-content__lead {
+    margin: 0 0 65px 40px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   .page-content__product-list {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -30px 35px -30px;
+    margin: 0 -30px 60px -30px;
 
     list-style-type: none;
   }
@@ -121,12 +126,11 @@
   }
 
   .page-content__subtitle-dash {
-    height: 25px;
-    margin: 0 -30px 90px -30px;
+    margin: 25px -30px 80px -30px;
   }
 
   .page-content__subtitle-wrapper {
-    margin: 0 30px 0 30px;
+    margin: -25px 30px 0 30px;
   }
 
   .page-content__subtitle {
@@ -161,14 +165,6 @@
   .page-content__promotion {
     margin: 0 0 75px 0;
   }
-
-  .page-content__lead {
-    width: 350px;
-    margin: 0 20px 65px 70px;
-
-    font-size: 20px;
-    line-height: 30px;
-  }
 }
 
 @media (min-width: @desktop-width) {
@@ -178,12 +174,16 @@
   }
 
   .page-content__title {
-    margin: 0 0 50px 0;
+    margin: 0 0 55px 0;
+  }
+
+  .page-content__lead {
+    margin: 0 0 65px 0;
   }
 
   .page-content__product-list {
     justify-content: center;
-    margin: 0 -40px 45px -40px;
+    margin: 0 -40px 70px -40px;
   }
 
   .page-content__product-item {
@@ -194,16 +194,15 @@
   }
 
   .page-content__subtitle-dash {
-    height: 25px;
-    margin: 0 -110px 90px -110px;
+    margin: 25px -110px 80px -110px;
   }
 
   .page-content__subtitle-wrapper {
-    margin: 0 70px 0 70px;
+    margin: -25px 70px 0 70px;
   }
 
   .page-content__subtitle {
-    padding: 0 35px;
+    padding: 0 40px;
   }
 
   .page-content__additionals-wrapper {
@@ -235,9 +234,5 @@
     width: 245px;
     height: auto;
     margin: 0;
-  }
-
-  .page-content__lead {
-    margin-left: 110px;
   }
 }

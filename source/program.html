@@ -10,7 +10,9 @@
     <header class="page-header">
       <a class="page-header__logo" href="index.html"></a>
       <nav class="page-header__menu main-menu">
-        <button class="main-menu__toggle">Меню</button>
+        <button class="main-menu__toggle main-menu__toggle--close">
+          <span class="visually-hidden">Меню</span>
+        </button>
         <ul class="main-menu__list">
           <li class="main-menu__item">
             <a class="main-menu__link" href="index.html">Главная</a>
@@ -18,16 +20,14 @@
           <li class="main-menu__item">
             <a class="main-menu__link" href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="main-menu__item main-menu__item--selected">
-            Подбор программы
-          </li>
+          <li class="main-menu__item main-menu__item--selected">Подбор программы</li>
         </ul>
       </nav>
     </header>
     <main class="page-content">
       <h1 class="page-content__title">Подбор программы</h1>
       <p class="page-content__lead">
-        Заполните анкету и мы подберем программу питания для вашего кота.
+        Заполните анкету и мы подберем<br> программу питания для вашего кота.
       </p>
       <form
         class="page-content__request-form request-form"
@@ -35,36 +35,38 @@
         method="post"
       >
         <div class="request-form__wrapper request-form__wrapper--main">
-          <label class="request-form__field">
-            <span class="request-form__label request-form__label--required">
-              Имя:
-            </span>
-            <input
-              class="request-form__input request-form__input--name"
-              type="text"
-              placeholder="Барсик"
-              name="name"
-              required>
-          </label>
-          <label class="request-form__field">
-            <span class="request-form__label request-form__label--required">
-              Вес (кг):
-            </span>
-            <input
-              class="request-form__input request-form__input--weight"
-              type="number"
-              placeholder="7"
-              name="weight"
-              required>
-          </label>
-          <label class="request-form__field">
-            <span class="request-form__label">Возраст (лет):</span>
-            <input
-              class="request-form__input request-form__input--age"
-              type="number"
-              placeholder="7"
-              name="age">
-          </label>
+          <div class="request-form__fieldset request-form__fieldset--invisible">
+            <label class="request-form__field">
+              <span class="request-form__label request-form__label--required">
+                Имя:
+              </span>
+              <input
+                class="request-form__input request-form__input--name"
+                type="text"
+                placeholder="Барсик"
+                name="name"
+                required>
+            </label>
+            <label class="request-form__field">
+              <span class="request-form__label request-form__label--required">
+                Вес (кг):
+              </span>
+              <input
+                class="request-form__input request-form__input--weight"
+                type="number"
+                placeholder="7"
+                name="weight"
+                required>
+            </label>
+            <label class="request-form__field">
+              <span class="request-form__label">Возраст (лет):</span>
+              <input
+                class="request-form__input request-form__input--age"
+                type="number"
+                placeholder="7"
+                name="age">
+            </label>
+          </div>
           <fieldset class="request-form__fieldset">
             <label class="request-form__field">
               <input
@@ -98,7 +100,9 @@
         </div>
         <div class="page-content__subtitle-dash">
           <div class="page-content__subtitle-wrapper">
-            <h2 class="page-content__subtitle">Контактные&nbsp;данные<br> (владельца&nbsp;кота)</h2>
+            <h2 class="page-content__subtitle">
+              Контактные&nbsp;данные<br> (владельца&nbsp;кота)
+            </h2>
           </div>
         </div>
         <div class="request-form__wrapper request-form__wrapper--contacts">
