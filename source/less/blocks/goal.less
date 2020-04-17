@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px;
+  padding: 25px 20px 20px 20px;
 
   background: @light-gray;
 }
@@ -18,24 +18,28 @@
 
   &::before {
     display: block;
-    height: 50px;
-    width: 50px;
-    margin-right: 20px;
+    height: 55px;
+    width: 67px;
 
     content: "";
   }
 
   .goal--slim &::before {
+    margin: 0 10px 0 -8px;
+
     background:
-      url("../img/icon-cat-slim.svg") no-repeat center center,
-      radial-gradient(circle, @leaf, @leaf 66%, transparent 66%);
+      url("../img/icon-cat-slim.svg") center top/35px 49px no-repeat,
+      radial-gradient(circle, @leaf, @leaf 59%, transparent 59%);
   }
 
   .goal--pro &::before {
-    width: 67px;
-    margin-left: -8px;
+    height: 50px;
+    margin: 0 10px 2px -8px;
+    // Для того, чтобы отцентрировать изображение пантеры, которое очень
+    // разбалансировано на макете.
+
     background:
-      url("../img/icon-cat-pro.svg") no-repeat center center,
+      url("../img/icon-cat-pro.svg") center center/67px 28px no-repeat,
       radial-gradient(circle, @leaf, @leaf 60%, transparent 60%);
   }
 }
@@ -76,36 +80,39 @@
 
 @media (min-width: @tablet-width) {
   .goal {
+    position: relative;
+
     display: block;
-    padding: 80px 0 60px 55px;
+    padding: 80px 0 70px 55px;
 
     &::before {
       display: block;
       float: right;
-      height: 200px;
-      width: 200px;
-      margin: 0 60px 0 20px;
+      height: 222px;
+      width: 268px;
 
       content: "";
     }
 
     &--slim::before {
+      margin: 5px 25px 0 10px;
+
       background:
-        url("../img/icon-cat-slim.svg") no-repeat center center,
-        radial-gradient(circle, @leaf, @leaf 66%, transparent 66%);
+        url("../img/icon-cat-slim.svg") center top/141px 194px no-repeat,
+        radial-gradient(circle, @leaf, @leaf 58%, transparent 58%) center bottom;
     }
 
     &--pro::before {
-      width: 268px;
-      margin-right: 26px;
+      margin: 5px 25px 0 15px;
+
       background:
-        url("../img/icon-cat-pro.svg") no-repeat center center,
-        radial-gradient(circle, @leaf, @leaf 60%, transparent 60%);
+        url("../img/icon-cat-pro.svg") center center/268px 113px no-repeat,
+        radial-gradient(circle, @leaf, @leaf 58%, transparent 58%) center bottom;
     }
   }
 
   .goal__title {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 
     font-size: 36px;
     line-height: 36px;
@@ -117,7 +124,7 @@
 
   .goal__description {
     padding: 0;
-    margin-bottom: 60px;
+    margin-bottom: 55px;
 
     font-size: 16px;
     line-height: 24px;
@@ -126,18 +133,23 @@
   }
 
   .goal__btn {
+    position: absolute;
+    bottom: 60px;
+
     font-size: 20px;
     line-height: 20px;
 
     &::after {
       height: 20px;
+      margin-left: 25px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .goal {
-    padding: 50px 60px 60px 55px;
+    padding: 45px 50px 60px 50px;
+    min-height: 375px;
 
     &::before {
       display: none;
@@ -146,26 +158,46 @@
 
   .goal__title {
     height: 100px;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 
     line-height: 100px;
     font-size: 36px;
     vertical-align: middle;
 
-    &::before {
+    .goal &::before {
       display: block;
-      height: 100px;
-      width: 100px;
-      margin-right: 50px;
+      height: 105px;
+      width: 134px;
+    }
+
+    .goal--slim &::before {
+      margin: 0 45px 0 -15px;
+
+      background:
+        url("../img/icon-cat-slim.svg") center top/71px 97px no-repeat,
+        radial-gradient(circle, @leaf, @leaf 60%, transparent 60%);
     }
 
     .goal--pro &::before {
-      width: 134px;
-      margin-left: -17px;
+      margin: 0 45px 0 -15px;
+      // Для того, чтобы отцентрировать изображение пантеры, которое очень
+      // разбалансировано на макете.
+
+      background:
+        url("../img/icon-cat-pro.svg") center center/134px 57px no-repeat,
+        radial-gradient(circle, @leaf, @leaf 60%, transparent 60%);
     }
   }
 
   .goal__description {
     margin-bottom: 30px;
+  }
+
+  .goal__btn {
+    position: static;
+
+    &::after {
+      margin-left: 25px;
+    }
   }
 }

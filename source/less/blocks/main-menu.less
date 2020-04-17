@@ -1,26 +1,56 @@
+.main-menu {
+  flex-grow: 1;
+
+  text-align: right;
+}
+
 .main-menu__list {
   .margin-padding-0();
 
-  position: absolute;
-
   display: none;
+  flex-direction: column;
+
   list-style-type: none;
+}
+
+.main-menu__list--nojs {
+  display: flex;
 }
 
 .main-menu__toggle {
   .margin-padding-0();
 
-  display: block;
-  margin: 20px;
+  display: inline-block;
   width: 25px;
-  height: 19px;
-
-  font-size: 0;
+  height: 25px;
+  margin: 20px 20px 20px 20px;
 
   background: url("../img/icon-mobile-menu.svg") no-repeat center center;
   border: none;
 
   cursor: pointer;
+
+  &--close {
+    background-image: url("../img/icon-close.svg");
+    background-size: 19px 19px;
+  }
+}
+
+.main-menu__item {
+  .margin-padding-0();
+  .font-oswald (20px; 20px; @black; uppercase; 500);
+
+  padding: 25px;
+
+  text-align: center;
+
+  border-top: @light-gray 1px solid;
+}
+
+.main-menu__link {
+  text-decoration: none;
+  font-weight: 500;
+  color: @black;
 }
 
 @media (min-width: @tablet-width) {
@@ -29,34 +59,38 @@
   }
 
   .main-menu__list {
-    position: relative;
-
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
+    margin: 0 -15px 0 -15px;
   }
 
   .main-menu__item {
     .margin-padding-0();
+    .font-oswald (18px; 18px; @black2; uppercase);
 
-    margin: 0 15px 0 20px;
-    padding: 12px 0;
+    margin: 0 15px 5px 20px;
+    padding: 0 0 12px 0;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+
+    border: none;
 
     &--selected {
-      .font-oswald (18px; 18px; @black2; uppercase);
       border-bottom: @leaf 2px solid;
     }
   }
 
   .main-menu__link {
-    .font-oswald (18px; 18px; @black2; uppercase);
-    text-decoration: none;
+    font-weight: 400;
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-menu__list {
-    margin: 0 -15px;
+    margin: 0 -1.35%;
 
     &--inverted .main-menu__item {
       color: @white;
@@ -71,8 +105,8 @@
     }
   }
 
-  .main-menu__item,
-  .main-menu__link {
+  .main-menu__item {
+    margin: 0 1.35% 5px 1.35%;
     font-size: 20px;
   }
 }

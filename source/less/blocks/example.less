@@ -10,11 +10,15 @@
   .font-oswald (36px; 36px; @black);
 
   padding: 30px 20px 15px 20px;
+  margin: 0 -20px;
 
   background: @light-gray;
 }
 
 .example__wrapper {
+  margin: 0 -20px;
+  padding: 20px 20px 0 20px;
+
   background: @light-gray;
 }
 
@@ -22,7 +26,7 @@
   .margin-padding-0();
   .font-arial (14px; 18px; @dark-gray);
 
-  margin: 15px 20px 25px 20px;
+  margin-bottom: 25px;
 }
 
 .example__numbers-list {
@@ -31,7 +35,7 @@
   display: flex;
   flex-basis: 100%;
   justify-content: center;
-  margin: 0 5px 40px 4px;
+  margin: 0 -15px 35px -15px;
 
   list-style-type: none;
 }
@@ -48,12 +52,16 @@
 }
 
 .example__compare {
+  margin: 0 -20px 0 -20px;
+  padding: 25px 0 0 0;
+
   background: @light-gray;
 }
 
 @media (min-width: @tablet-width) {
   .example__title {
-    padding: 0 30px 60px 30px;
+    margin: 0 0 45px 0;
+    padding: 0;
 
     font-size: 60px;
     line-height: 60px;
@@ -73,7 +81,7 @@
 
   .example__description {
     flex-basis: 100%;
-    margin: 0 30px 55px 30px;
+    margin: 0 0 50px 0;
 
     font-size: 16px;
     line-height: 24px;
@@ -82,7 +90,7 @@
   .example__numbers-list {
     flex-basis: 390px;
     flex-grow: 1;
-    margin: 0 0 0 10px;
+    margin: 0 -20px;
   }
 
   .example__numbers-item {
@@ -97,7 +105,7 @@
     flex-direction: column;
     flex-basis: 320px;
     flex-grow: 1;
-    margin: 0 30px 0 0;
+    margin: 0 0 0 0;
 
     font-size: 20px;
     line-height: 30px;
@@ -106,6 +114,13 @@
 
   .example__expenses br {
     display: inline;
+  }
+
+  .example__compare {
+    margin: 0 -30px 0 -30px;
+    padding: 0 0 0 0;
+
+    background: @light-gray;
   }
 }
 
@@ -118,40 +133,42 @@
   .example__title {
     flex-basis: 100%;
     padding: 0;
-    margin: 0 110px 76px 110px;
+    margin: 0 0 75px 0;
   }
 
   .example__wrapper {
-    flex-basis: 50%;
-    padding: 70px 180px 75px 110px;
+    flex-basis: 53%;
+    align-content: flex-start;
+    padding: 75px 0 0 110px;
+    margin: 0 0 0 -110px;
 
     background: @light-gray;
   }
 
   .example__description {
-    margin: 0 0 70px 0;
+    margin: 0 30px 65px 0;
     padding: 0;
   }
 
   .example__numbers-list {
-    margin: 0 20px 60px 0;
+    justify-content: flex-start;
+    margin: 0 20px 55px 0;
   }
 
   .example__numbers-item {
+    flex-basis: 165px;
+    flex-grow: 0;
     margin: 0 40px 0 0;
-  }
-
-  .example__compare {
-    flex-basis: 50%;
-    margin: 0 0 0 -75px;
   }
 
   .example__expenses {
     flex-direction: row;
+    flex-basis: 100%;
+    margin: 0 0 75px 0;
   }
 
   .example__expenses-name {
-    flex-basis: 200px;
+    flex-basis: 205px;
 
     text-align: left;
   }
@@ -160,5 +177,10 @@
     flex-basis: 160px;
 
     text-align: center;
+  }
+
+  .example__compare {
+    flex-basis: 47%;
+    margin: 0 -110px 0 0;
   }
 }

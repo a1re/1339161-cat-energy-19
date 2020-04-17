@@ -1,9 +1,13 @@
+.goals {
+  margin-bottom: 10px;
+}
+
 .goals__list {
   .margin-padding-0();
 
   display: flex;
   flex-wrap: wrap;
-  padding: 20px 0 0 20px;
+  margin: 0 -20px 0 0;
 
   list-style-type: none;
 }
@@ -11,16 +15,20 @@
 .goals__list-item {
   .margin-padding-0();
 
-  flex-basis: 280px;
   flex-grow: 1;
+  flex-basis: 280px;
   margin: 0 20px 20px 0;
 }
 
 @media (min-width: @tablet-width) {
+  .goals {
+    margin-bottom: 20px;
+  }
+
   .goals__list {
     flex-direction: column;
-    padding: 30px 0 0 30px;
-    margin-bottom: 20px;
+    padding: 0;
+    margin: 0 -30px 0 0;
   }
 
   .goals__list-item {
@@ -30,16 +38,18 @@
 }
 
 @media (min-width: @desktop-width) {
+  .goals {
+    margin-bottom: 75px;
+  }
+
   .goals__list {
     flex-direction: row;
     flex-wrap: nowrap;
-    padding: 0 110px;
-    margin: 0 -40px 80px -40px;
-    margin-bottom: 80px;
+    margin: 0 0 0 -80px;
   }
 
   .goals__list-item {
     flex-basis: 570px;
-    margin: 0 40px;
+    margin: 0 0 0 80px;
   }
 }
