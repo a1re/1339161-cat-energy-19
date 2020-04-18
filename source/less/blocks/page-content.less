@@ -1,5 +1,5 @@
 .page-content {
-  min-width: 320px;
+  min-width: @small-screen;
   width: auto;
   padding: 0 20px;
 }
@@ -84,16 +84,15 @@
   background: @white;
 }
 
-@media (max-width: @tablet-width - 1) {
+@media (max-width: @medium-screen - 1) {
   .page-content__product-list {
     border-right: @light-gray 1px solid;
     border-bottom: @light-gray 1px solid;
   }
 }
 
-@media (min-width: @tablet-width) {
+@media (min-width: @medium-screen) {
   .page-content {
-    min-width: 320px;
     width: auto;
     padding: 60px 30px 0 30px;
   }
@@ -167,9 +166,9 @@
   }
 }
 
-@media (min-width: @desktop-width) {
+@media (min-width: @large-screen) {
   .page-content {
-    max-width: @desktop-width-max;
+    max-width: @large-screen-wrapper-max;
     width: auto;
     margin: 0 auto;
     padding: 75px 110px 0 110px;
