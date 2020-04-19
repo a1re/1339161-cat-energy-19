@@ -20,6 +20,18 @@
   display: inline-block;
 
   margin-bottom: 25px;
+
+  &:focus {
+    .focus-block-alternative();
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-footer__footer {

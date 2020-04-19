@@ -16,17 +16,20 @@
   margin: 0 0 0 15px;
   box-sizing: border-box;
 
-  opacity: 0.5;
-  border: @gray 1px solid;
+  border: rgba(@gray, 0.5) 1px solid;
 
   &:hover {
-    opacity: 1;
+    border: rgba(@gray, 1) 1px solid;
   }
 
   &:focus {
     outline: none;
     opacity: 1;
-    border-color: @dark-gray;
+    border: @dark-gray 2px solid;
+  }
+
+  &:invalid {
+    border: @pink 2px solid;
   }
 
   &--email {
@@ -78,8 +81,13 @@
     visibility: visible;
   }
 
-  .field__field:hover input ~ & {
+  .field:hover input ~ & {
     border: darken(@gray, 10%) 1px solid;
+  }
+
+  .field input:focus ~ & {
+    border: darken(@gray, 10%) 1px solid;
+    .focus-block();
   }
 
   &:active {
@@ -96,16 +104,16 @@
   padding: 15px;
 
   opacity: 0.5;
-  border: @gray 1px solid;
+  border: rgba(@gray, 0.5) 1px solid;
 
   &:hover {
-    opacity: 1;
+    border: rgba(@gray, 1) 1px solid;
   }
 
   &:focus {
     outline: none;
     opacity: 1;
-    border-color: @dark-gray;
+    border: @dark-gray 2px solid;
   }
 }
 
@@ -141,6 +149,11 @@
 
   .field:hover input ~ & {
     border: darken(@gray, 10%) 1px solid;
+  }
+
+  .field input:focus ~ & {
+    border: darken(@gray, 10%) 1px solid;
+    .focus-block();
   }
 
   &:active {
