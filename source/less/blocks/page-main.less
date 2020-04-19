@@ -1,0 +1,91 @@
+.page-main {
+  min-width: @small-screen;
+  width: auto;
+  padding: 0 @small-indent;
+}
+
+.page-main__promo {
+  margin: 0 0 20px 0;
+}
+
+.page-main__goals {
+  margin: 0 0 10px 0;
+}
+
+.page-main__how-it-works {
+ margin: 0 0 20px 0;
+}
+
+@media (min-width: @medium-screen) {
+  .page-main {
+    width: auto;
+    padding: 0 @medium-indent;
+  }
+
+  .page-main__promo {
+    margin: 0 0 0 0;
+  }
+
+  .page-main__goals {
+    margin: 0 0 20px 0;
+  }
+
+  .page-main__how-it-works {
+    margin: 0 0 40px 0;
+  }
+}
+
+@media (min-width: @large-screen) {
+  .page-main {
+    width: auto;
+    margin: 0 auto;
+    padding: 75px @large-indent 0 @large-indent;
+  }
+
+  .page-main__promo {
+    width: auto;
+    margin: 0 -(@large-indent) 80px -(@large-indent);
+  }
+
+  .page-main__goals {
+    width: (@large-screen - @large-indent*2);
+    margin: 0 auto 75px auto;
+  }
+
+  .page-main__how-it-works {
+    width: (@large-screen - @large-indent*2);
+    margin: 0 auto 80px auto;
+  }
+
+  .page-main__example {
+    width: auto;
+    margin: 0 -(@large-indent);
+  }
+}
+
+@media (min-width: @xlarge-screen) {
+  .page-main {
+    max-width: @max-screen;
+    width: auto;
+    margin: 0 auto;
+    padding: 75px @xlarge-indent 0 @xlarge-indent;
+  }
+
+  .page-main__promo {
+    width: auto;
+    margin: 0 -(@xlarge-indent) 80px -(@xlarge-indent);
+  }
+
+  .page-main__goals {
+    width: auto;
+  }
+
+  .page-main__how-it-works {
+    width: auto;
+  }
+
+  .page-main__example {
+    width: auto;
+    margin: 0 -(@xlarge-indent);
+  }
+}

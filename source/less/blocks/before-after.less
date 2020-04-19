@@ -132,7 +132,13 @@
 @media (min-width: @large-screen) {
   .before-after {
     margin-top: 0;
-    flex-grow: 1;
+    flex-grow: 0;
+  }
+
+  .before-after__image-stack {
+    width: 645px;
+    height: 347px;
+    margin-bottom: 15px;
   }
 
   .before-after__image {
@@ -140,12 +146,27 @@
 
     &--before {
       background-image: url("../img/before-desktop@1x.png");
-      background-position: left -20px bottom 0;
+      background-position: left -40px bottom 0;
     }
 
     &--after {
       background-image: url("../img/after-desktop@1x.png");
-      background-position: right 20px bottom 0;
+      background-position: right -5px bottom 0;
     }
+  }
+
+  .before-after__wrapper {
+    margin-right: -120px;
+  }
+}
+
+@media (min-width: @xlarge-screen) {
+  .before-after {
+    margin-top: 0;
+    flex-grow: 1;
+  }
+
+  .before-after__wrapper {
+    margin: 0 0 0 -30px;
   }
 }
