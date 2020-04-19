@@ -124,9 +124,6 @@
 }
 
 @media (min-width: @large-screen) {
-  .example {
-  }
-
   .example__title {
     padding: 0;
     margin: 0 auto 75px auto;
@@ -203,12 +200,7 @@
   }
 }
 
-
 @media (min-width: @xlarge-screen) {
-  .example__story {
-    padding-left: @xlarge-indent;
-  }
-
   .example__title {
     width: auto;
     margin: 0 @xlarge-indent 75px @xlarge-indent;
@@ -216,6 +208,7 @@
 
   .example__wrapper {
     width: auto;
+
     &::before,
     &::after {
       display: none;
@@ -224,6 +217,7 @@
 
   .example__story {
     flex-basis: 47%;
+    padding-left: @xlarge-indent;
   }
 
   .example__compare {
