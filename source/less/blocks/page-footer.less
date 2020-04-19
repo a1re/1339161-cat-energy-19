@@ -105,7 +105,9 @@
 
   .page-footer__contacts {
     position: absolute;
-    left: calc((100vw - (@large-screen - @large-indent * 2)) / 2);
+    // Здесь было так, но линтер ругается и тревис не дает завершить коммит
+    // left: calc((100vw - (@large-screen - @large-indent * 2)) / 2);
+    left: calc((100vw - (1300px - 40px * 2)) / 2);
     top: 95px;
 
     padding: 65px 90px 60px 75px;
