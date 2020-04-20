@@ -23,16 +23,6 @@
   background-color: transparent;
   appearance: none;
 
-  /* На будущее, когда буду заниматься доступностью и управлением с клавиатуры
-  &:focus {
-    outline: none;
-  }
-
-  &:focus::-webkit-slider-runnable-track {
-    border-color: @leaf;
-  }
-  */
-
   &::-webkit-slider-runnable-track {
     .small-track();
   }
@@ -88,13 +78,23 @@
   }
 }
 
-@media (min-width: @tablet-width) {
+@media (min-width: @medium-screen) {
   .range-selector__label {
     font-size: 20px;
     line-height: 20px;
     padding: 5px 0;
 
     border-bottom: rgba(@black, 0.23) 1px dotted;
+
+    cursor: pointer;
+
+    &:hover {
+      border-bottom: rgba(@black, 0.4) 1px solid;
+    }
+
+    &:active {
+      border-bottom: none;
+    }
   }
 
   .range-selector__label:first-of-type {
@@ -106,6 +106,15 @@
   }
 
   .range-selector__input {
+    &:focus {
+      outline: none;
+    }
+
+    &:focus::-webkit-slider-runnable-track {
+      background-color: @gray;
+      box-shadow: 0 0 5px 0 @gray;
+    }
+
     &::-webkit-slider-runnable-track {
       .big-track();
     }

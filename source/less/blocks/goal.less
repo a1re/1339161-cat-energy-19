@@ -78,7 +78,7 @@
   }
 }
 
-@media (min-width: @tablet-width) {
+@media (min-width: @medium-screen) {
   .goal {
     position: relative;
 
@@ -141,12 +141,21 @@
 
     &::after {
       height: 20px;
-      margin-left: 25px;
+      margin-left: 20px;
+    }
+
+    &:hover::after {
+      width: 34px;
+      background: url("../img/icon-right-arrow-verylong.svg") no-repeat left center;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }
 
-@media (min-width: @desktop-width) {
+@media (min-width: @large-screen) {
   .goal {
     padding: 45px 50px 60px 50px;
     min-height: 375px;

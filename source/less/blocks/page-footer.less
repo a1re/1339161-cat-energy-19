@@ -3,7 +3,7 @@
 
   display: flex;
   justify-content: space-between;
-  padding: 30px 20px 25px 20px;
+  padding: 25px @small-indent 25px @small-indent;
 
   background-color: @light-gray;
 }
@@ -19,26 +19,42 @@
 
   display: inline-block;
 
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+
+  &:focus {
+    .focus-block-alternative();
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-footer__footer {
   .margin-padding-0();
-
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  padding: 40px 20px 20px 20px;
+  padding: 40px @small-indent 20px @small-indent;
 
   text-align: center;
 
   background: @light-gray;
 }
 
+.page-footer__footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  text-align: center;
+}
+
 .page-footer__social {
   .margin-padding-0();
 
-  margin: 0 0 20px 0;
+  margin: 0 0 @small-indent 0;
 
   border-top: @gray 1px solid;
   border-bottom: @gray 1px solid;
@@ -49,7 +65,7 @@
 }
 
 
-@media (min-width: @tablet-width) {
+@media (min-width: @medium-screen) {
   .page-footer__contacts {
     padding: 70px 70px 60px 70px;
   }
@@ -60,10 +76,14 @@
   }
 
   .page-footer__footer {
+    padding: 40px @medium-indent;
+  }
+
+  .page-footer__footer-wrapper {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 30px;
   }
 
   .page-footer__logo {
@@ -76,18 +96,18 @@
   }
 }
 
-@media (min-width: @desktop-width) {
+@media (min-width: @large-screen) {
   .page-footer {
     position: relative;
 
-    max-width: @desktop-width-max;
     width: auto;
-    margin: 0 auto;
   }
 
   .page-footer__contacts {
     position: absolute;
-    left: 110px;
+    // Здесь было так, но линтер ругается и тревис не дает завершить коммит
+    // left: calc((100vw - (@large-screen - @large-indent * 2)) / 2);
+    left: calc((100vw - (1300px - 40px * 2)) / 2);
     top: 95px;
 
     padding: 65px 90px 60px 75px;
@@ -101,6 +121,39 @@
   }
 
   .page-footer__footer {
-    padding: 40px 110px;
+    width: auto;
+    padding: 40px @large-indent 35px @large-indent;
+  }
+
+  .page-footer__footer-wrapper {
+    width: (@large-screen - @large-indent * 2);
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@media (min-width: @xlarge-screen) {
+  .page-footer {
+    max-width: @max-screen;
+    margin: 0 auto;
+  }
+
+  .page-footer__contacts {
+    position: absolute;
+    left: 110px;
+    top: 95px;
+
+    padding: 65px 90px 60px 75px;
+
+    background: @white;
+  }
+
+  .page-footer__footer {
+    padding: 40px 0;
+  }
+
+  .page-footer__footer-wrapper {
+    width: auto;
+    margin: 0 @xlarge-indent;
   }
 }

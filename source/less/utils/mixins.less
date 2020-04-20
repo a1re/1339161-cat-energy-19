@@ -14,6 +14,27 @@
   color: @color;
 }
 
+.focus-block() {
+  outline: none;
+  box-shadow: 0 0 15px 0 rgba(@dark-gray2, 0.4);
+  text-shadow: none;
+}
+
+.focus-block-alternative() {
+  outline: none;
+  box-shadow: 0 0 15px 0 @leaf;
+  text-shadow: none;
+}
+
+.focus-text() {
+  outline: none;
+  text-shadow: 0 0 15px @leaf;
+}
+
+.focus-text-alternative() {
+  outline: none;
+  text-shadow: 0 0 15px @white;
+}
 
 .default-button() {
   .font-oswald(16px; 40px; @white; uppercase);
@@ -38,16 +59,10 @@
     background-color: @leaf-active;
     color: @white-30;
   }
-}
 
-.visually-hidden() {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-
-  clip: rect(0 0 0 0);
+  &:focus {
+    .focus-block();
+  }
 }
 
 .margin-padding-0() {
@@ -99,11 +114,20 @@
   width: 34px;
   margin-top: -15px;
 
-  border: none;
+  border: @gray 1px solid;
   border-radius: 50%;
   background: radial-gradient(circle, @leaf 0%, @leaf 17%, @white 18%);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
   transform: translateX(2px);
 
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  &:active {
+    border: @leaf 1px solid;
+  }
 }
