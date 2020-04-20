@@ -12,6 +12,10 @@
   background: url("../img/bg-map-mobile@1x.png") center bottom no-repeat;
   background-size: cover;
   height: 360px;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/bg-map-mobile@2x.png");
+  }
 }
 
 .page-footer__logo {
@@ -73,6 +77,10 @@
   .page-footer__map {
     background-image: url("../img/bg-map-tablet@1x.png");
     height: 400px;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-map-tablet@2x.png");
+    }
   }
 
   .page-footer__footer {
@@ -118,6 +126,10 @@
   .page-footer__map {
     background-image: url("../img/bg-map-desktop@1x.png");
     height: 400px;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/bg-map-desktop@2x.png");
+    }
   }
 
   .page-footer__footer {
