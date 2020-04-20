@@ -38,18 +38,38 @@
 
   &--content::before {
     background: @leaf url("../img/advantage-leaf@1x.png") no-repeat center center;
+    background-size: 50px 50px;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/advantage-leaf@2x.png");
+    }
   }
 
   &--form::before {
     background: @leaf url("../img/advantage-powder@1x.png") no-repeat center center;
+    background-size: 50px 50px;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/advantage-powder@2x.png");
+    }
   }
 
   &--howto::before {
     background: @leaf url("../img/advantage-dining@1x.png") no-repeat center center;
+    background-size: 50px 50px;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/advantage-dining@2x.png");
+    }
   }
 
   &--timing::before {
     background: @leaf url("../img/advantage-clock@1x.png") no-repeat center center;
+    background-size: 50px 50px;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/advantage-clock@2x.png");
+    }
   }
 }
 
