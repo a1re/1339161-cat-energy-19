@@ -28,23 +28,30 @@
     border: @dark-gray 2px solid;
   }
 
+  &:focus + .field__input-icon path {
+    fill: @leaf;
+  }
+
   &:invalid {
     border: @pink 2px solid;
   }
 
-  &--email {
-    background-image: url("../img/icon-mail.svg");
-    background-repeat: no-repeat;
-    background-size: 18px 14px;
-    background-position: right 15px center;
+  &:invalid + .field__input-icon path {
+    fill: @pink;
   }
+}
 
-  &--tel {
-    background-image: url("../img/icon-phone.svg");
-    background-repeat: no-repeat;
-    background-size: 21px 21px;
-    background-position: right 10px center;
-  }
+.field__input-icon {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+
+  width: 21px;
+  height: 21px;
+
+  text-align: center;
+  vertical-align: middle;
+  line-height: 21px;
 }
 
 .field__label--required::after {
