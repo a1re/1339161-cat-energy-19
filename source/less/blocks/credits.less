@@ -21,17 +21,14 @@
 .credits__logo svg {
   width: 27px;
   height: 34px;
+  color: @dark-gray2;
 }
 
-.credits__logo svg path {
-  fill: @dark-gray2;
+.credits__logo:hover svg,
+.credits__logo:focus svg {
+  color: @leaf;
 }
 
-.credits__logo:hover svg path,
-.credits__logo:focus svg path {
-  fill: @leaf;
-}
-
-.credits__logo:active svg path {
-  fill: rgba(@dark-gray2, 0.3);
+.credits__logo:active svg {
+  color: rgba(@dark-gray2, 0.3);
 }

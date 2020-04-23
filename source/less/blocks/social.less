@@ -15,36 +15,17 @@
 .social__link {
   .margin-padding-0();
 
-  & svg path,
-  & svg circle {
-    fill: @dark-gray2;
+  & svg {
+    color: @dark-gray2;
   }
 
-  &:hover svg path,
-  &:hover svg circle,
-  &:focus svg path,
-  &:focus svg circle {
-    fill: @leaf;
+  &:hover svg,
+  &:focus svg {
+    color: @leaf;
   }
 
-  &:active svg path,
-  &:active svg circle {
-    fill: rgba(@leaf, 0.3);
-  }
-
-  &--vkontakte svg {
-    width: 22px;
-    height: 12px;
-  }
-
-  &--instagram svg {
-    width: 17px;
-    height: 17px;
-  }
-
-  &--facebook svg {
-    width: 10px;
-    height: 19px;
+  &:active svg {
+    color: rgba(@leaf, 0.3);
   }
 }
 
