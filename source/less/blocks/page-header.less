@@ -19,14 +19,6 @@
   top: 10px;
   left: @small-indent;
 
-  width: 191px;
-  height: 38px;
-
-  & img {
-    width: 100%;
-    height: auto;
-  }
-
   &:hover {
     opacity: 0.8;
   }
@@ -38,6 +30,11 @@
   &:focus {
     .focus-block-alternative();
   }
+}
+
+.page-header__logo-image {
+  width: 191px;
+  height: 38px;
 }
 
 .page-header__menu {
@@ -54,7 +51,9 @@
   .page-header__logo {
     top: 25px;
     left: @medium-indent;
+  }
 
+  .page-header__logo-image {
     width: 174px;
     height: 59px;
   }
@@ -70,7 +69,9 @@
   .page-header__logo {
     top: 55px;
     left: @large-indent;
+  }
 
+  .page-header__logo-image {
     width: 203px;
     height: 60px;
   }
