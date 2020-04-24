@@ -8,6 +8,19 @@
   .font-oswald (16px; 16px; @black; uppercase);
 
   margin: 0 20px;
+
+  &:hover {
+    border-bottom: rgba(@black, 0.4) 1px solid;
+  }
+
+  &:active {
+    border-bottom: none;
+  }
+
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
 }
 
 /*
@@ -87,14 +100,6 @@
     border-bottom: rgba(@black, 0.23) 1px dotted;
 
     cursor: pointer;
-
-    &:hover {
-      border-bottom: rgba(@black, 0.4) 1px solid;
-    }
-
-    &:active {
-      border-bottom: none;
-    }
   }
 
   .range-selector__label:first-of-type {
@@ -112,7 +117,7 @@
 
     &:focus::-webkit-slider-runnable-track {
       background-color: @gray;
-      box-shadow: 0 0 5px 0 @gray;
+      opacity: 0.6;
     }
 
     &::-webkit-slider-runnable-track {

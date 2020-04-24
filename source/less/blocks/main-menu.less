@@ -90,7 +90,9 @@
       opacity: 0.6;
     }
 
-    &:active {
+    &:active,
+    &:focus {
+      outline: none;
       opacity: 0.3;
     }
   }
@@ -110,10 +112,6 @@
 
     &--inverted .main-menu__link {
       color: @white;
-
-      &:focus {
-        .focus-text-alternative();
-      }
     }
   }
 

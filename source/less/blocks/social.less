@@ -19,13 +19,17 @@
     color: @dark-gray2;
   }
 
-  &:hover svg,
-  &:focus svg {
+  &:hover svg {
     color: @leaf;
   }
 
-  &:active svg {
+  &:active svg,
+  &:focus svg {
     color: rgba(@leaf, 0.3);
+  }
+
+  &:focus {
+    outline: none;
   }
 }
 
