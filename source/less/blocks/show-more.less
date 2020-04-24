@@ -56,13 +56,11 @@
     background-color: @light-gray2;
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     background-color: @light-gray2;
     color: rgba(@dark-gray, 0.3);
-  }
-
-  &:focus {
-    .focus-block();
   }
 }
 

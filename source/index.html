@@ -24,14 +24,14 @@
       </symbol>
     </svg>
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
+      <span class="page-header__logo">
         <img
           class="page-header__logo-image"
           src="img/adaptive-logo.svg"
           width="191"
           height="39"
           alt="Cat Energy">
-      </a>
+      </span>
       <nav class="page-header__menu main-menu">
         <button class="main-menu__toggle main-menu__toggle--close">
           <span class="visually-hidden">Меню</span>
@@ -54,11 +54,22 @@
         <p class="promo__lead">Занялся собой? Займись котом!</p>
         <picture>
           <source
+            type="image/webp"
+            media="(min-width: 1300px)"
+            srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x">
+          <source
+            type="image/webp"
+            media="(min-width: 768px)"
+            srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x">
+          <source
             media="(min-width: 1300px)"
             srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
           <source
             media="(min-width: 768px)"
             srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+          <source
+            type="image/webp"
+            srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x">
           <img
             class="promo__product"
             src="img/index-can-mobile@1x.png"
@@ -164,7 +175,7 @@
           <span>Санкт-Петербург</span>
         </address>
       </section>
-      <div class="page-footer__map"></div>
+      <iframe class="page-footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003035!2d30.32085871604239!3d59.93871916905429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1587750745754!5m2!1sen!2sru" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       <div class="page-footer__footer">
         <div class="page-footer__footer-wrapper">
           <a class="page-footer__logo" href="index.html">

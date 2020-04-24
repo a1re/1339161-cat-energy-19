@@ -10,7 +10,9 @@
   margin-right: 25px;
 }
 
-.credits__text:active {
+.credits__text:active,
+.credits__text:focus {
+  outline: none;
   color: rgba(@dark-gray2, 0.3);
 }
 
@@ -31,4 +33,8 @@
 
 .credits__logo:active svg {
   color: rgba(@dark-gray2, 0.3);
+}
+
+.credits__logo:focus {
+  outline: none;
 }

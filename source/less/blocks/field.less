@@ -84,17 +84,16 @@
     content: "";
   }
 
-  input:checked ~ &::after {
+  .field__radio:checked ~ &::after {
     visibility: visible;
   }
 
-  .field:hover input ~ & {
+  .field:hover .field__radio ~ & {
     border: darken(@gray, 10%) 1px solid;
   }
 
-  .field input:focus ~ & {
+  .field .field__radio:focus ~ & {
     border: darken(@gray, 10%) 1px solid;
-    .focus-block();
   }
 
   &:active {
@@ -150,17 +149,16 @@
     content: "";
   }
 
-  input:checked ~ &::after {
+  .field__checkbox:checked ~ &::after {
     visibility: visible;
   }
 
-  .field:hover input ~ & {
+  .field:hover .field__checkbox ~ & {
     border: darken(@gray, 10%) 1px solid;
   }
 
-  .field input:focus ~ & {
+  .field .field__checkbox:focus ~ & {
     border: darken(@gray, 10%) 1px solid;
-    .focus-block();
   }
 
   &:active {
