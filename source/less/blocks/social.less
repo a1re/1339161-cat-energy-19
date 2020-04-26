@@ -15,17 +15,15 @@
 .social__link {
   .margin-padding-0();
 
-  svg {
-    fill: @dark-gray2;
+  color: @dark-gray2;
+
+  &:hover {
+    color: @leaf;
   }
 
-  &:hover svg {
-    fill: @leaf;
-  }
-
-  &:active svg,
-  &:focus svg {
-    fill: rgba(@leaf, 0.3);
+  &:active,
+  &:focus {
+    color: rgba(@leaf, 0.3);
   }
 
   &:focus {
