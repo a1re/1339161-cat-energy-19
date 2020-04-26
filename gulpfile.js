@@ -12,6 +12,7 @@ var less = require("gulp-less");
 var concat = require("gulp-concat");
 var postcss = require("gulp-postcss");
 var posthtml = require("gulp-posthtml");
+var htmlmin = require('gulp-htmlmin');
 var autoprefixer = require("autoprefixer");
 var csso = require("gulp-csso");
 var server = require("browser-sync").create();
@@ -38,6 +39,7 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include()
     ]))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 });
 
