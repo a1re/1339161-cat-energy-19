@@ -3,6 +3,7 @@
 var gulp = require("gulp");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
+var svgstore = require("gulp-svgstore");
 var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
 var rename = require("gulp-rename");
@@ -54,7 +55,23 @@ gulp.task("png-jpg-svg", function () {
     .pipe(gulp.dest("build/img"));
 })
 
-gulp.task("images", gulp.series("webp", "png-jpg-svg"));
+gulp.task("sprite", function () {
+  return gulp.src("source/img/icon-*.svg")
+    .pipe(imagemin([
+      imagemin.svgo()
+    ]))
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"));
+});
+
+gulp.task("delete-icons", function() {
+  return del("build/img/icon-*.svg");
+});
+
+gulp.task("images", gulp.series("webp", "png-jpg-svg", "sprite"));
 
 gulp.task("clean", function () {
   return del("build");
