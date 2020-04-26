@@ -3,10 +3,12 @@
 var gulp = require("gulp");
 var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
+var rename = require("gulp-rename");
 var less = require("gulp-less");
 var postcss = require("gulp-postcss");
 var posthtml = require("gulp-posthtml");
 var autoprefixer = require("autoprefixer");
+var csso = require("gulp-csso");
 var server = require("browser-sync").create();
 var del = require("del");
 var include = require("posthtml-include");
@@ -19,6 +21,8 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(csso())
+    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
