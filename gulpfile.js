@@ -9,6 +9,7 @@ var uglify = require('gulp-uglifyjs');
 var sourcemap = require("gulp-sourcemaps");
 var rename = require("gulp-rename");
 var less = require("gulp-less");
+var concat = require("gulp-concat");
 var postcss = require("gulp-postcss");
 var posthtml = require("gulp-posthtml");
 var autoprefixer = require("autoprefixer");
@@ -72,6 +73,7 @@ gulp.task("images", gulp.series("webp", "png-jpg-svg", "sprite"));
 
 gulp.task("js", function () {
   return gulp.src("source/js/**/*.js")
+    .pipe(concat("scripts.min.js"))
     .pipe(uglify())
     .pipe(gulp.dest("build/js"));
 });
