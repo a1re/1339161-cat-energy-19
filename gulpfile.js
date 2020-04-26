@@ -1,6 +1,8 @@
 "use strict";
 
 var gulp = require("gulp");
+var imagemin = require("gulp-imagemin");
+var webp = require("gulp-webp");
 var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
 var rename = require("gulp-rename");
@@ -36,6 +38,24 @@ gulp.task("html", function () {
     .pipe(gulp.dest("build"));
 });
 
+gulp.task("webp", function () {
+  return gulp.src("source/img/**/*.{png,jpg}")
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest("build/img"));
+});
+
+gulp.task("png-jpg-svg", function () {
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
+    .pipe(imagemin([
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.mozjpeg({progressive: true}),
+      imagemin.svgo()
+    ]))
+    .pipe(gulp.dest("build/img"));
+})
+
+gulp.task("images", gulp.series("webp", "png-jpg-svg"));
+
 gulp.task("clean", function () {
   return del("build");
 });
@@ -43,9 +63,9 @@ gulp.task("clean", function () {
 gulp.task("copy", function () {
   return gulp.src([
       "source/fonts/**/*.{woff,woff2}",
-      "source/img/**",
       "source/js/**",
       "source/*.ico",
+      "source/img/adaptive-logo.svg",
       "source/*.html"
   ], {
     base: "source"
@@ -55,6 +75,7 @@ gulp.task("copy", function () {
 
 gulp.task("build", gulp.series(
   "clean",
+  "images",
   "copy",
   "css",
   "html"
