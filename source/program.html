@@ -57,6 +57,7 @@
                 class="field__input field__input--name"
                 type="text"
                 placeholder="Барсик"
+                minlength="2"
                 name="name"
                 required>
             </label>
@@ -126,7 +127,7 @@
               </span>
               <input
                 class="field__input field__input--email"
-                type="text"
+                type="email"
                 placeholder="kuklachev@gmail.com"
                 name="email"
                 required>
@@ -140,7 +141,8 @@
               </span>
               <input
                 class="field__input"
-                type="text"
+                type="tel"
+                pattern="\+?[7-8]{1}[\d\-\s\(\)]{10,16}"
                 placeholder="8 (960) 900-60-90"
                 name="tel"
                 required>

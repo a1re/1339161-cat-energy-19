@@ -32,11 +32,11 @@
     fill: @leaf;
   }
 
-  &:invalid {
+  &:invalid:not(:placeholder-shown) {
     border: @pink 2px solid;
   }
 
-  &:invalid + .field__input-icon {
+  &:invalid:not(:placeholder-shown) + .field__input-icon {
     fill: @pink;
   }
 }
