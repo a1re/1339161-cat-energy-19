@@ -89,7 +89,9 @@ gulp.task('copy', function () {
       'source/fonts/**/*.{woff,woff2}',
       'source/*.ico',
       'source/img/adaptive-logo.svg',
-      'source/*.html'
+      'source/*.html',
+      'source/site.webmanifest',
+      'source/favicon.ico'
     ], {
       base: 'source'
     })
